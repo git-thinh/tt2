@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C813996-3687-41EC-B905-699C4D68807A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>tt2</RootNamespace>
+    <AssemblyName>tt2</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>_build64\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <NoWarn>CS0168</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>dll\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.World">
+      <HintPath>dll\Emgu.CV.World.dll</HintPath>
+    </Reference>
+    <Reference Include="LZ4">
+      <HintPath>dll\LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core">
+      <HintPath>dll\3.0\System.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IdentityModel">
+      <HintPath>dll\3.0\System.IdentityModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel.Selectors">
+      <HintPath>dll\3.0\System.IdentityModel.Selectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <HintPath>dll\3.0\System.Runtime.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <HintPath>dll\3.0\System.ServiceModel.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Threading">
+      <HintPath>dll\3.0\System.Threading.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <HintPath>dll\3.0\System.Xml.Linq.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\_Shared\LibCurlNet\Curl.cs">
+      <Link>_shared\LibCurlNet\Curl.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\Easy.cs">
+      <Link>_shared\LibCurlNet\Easy.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\Enums.cs">
+      <Link>_shared\LibCurlNet\Enums.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\External.cs">
+      <Link>_shared\LibCurlNet\External.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\Multi.cs">
+      <Link>_shared\LibCurlNet\Multi.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\MultiInfo.cs">
+      <Link>_shared\LibCurlNet\MultiInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\MultiPartForm.cs">
+      <Link>_shared\LibCurlNet\MultiPartForm.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\Share.cs">
+      <Link>_shared\LibCurlNet\Share.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\Slist.cs">
+      <Link>_shared\LibCurlNet\Slist.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\SSLContext.cs">
+      <Link>_shared\LibCurlNet\SSLContext.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\LibCurlNet\VersionInfoData.cs">
+      <Link>_shared\LibCurlNet\VersionInfoData.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\redisbasic\IRedisBase.cs">
+      <Link>_shared\redis\IRedisBase.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\redisbasic\RedisBase.cs">
+      <Link>_shared\redis\RedisBase.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\redisbasic\RedisSetting.cs">
+      <Link>_shared\redis\RedisSetting.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\redisbasic\REDIS_TYPE.cs">
+      <Link>_shared\redis\REDIS_TYPE.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\redisbasic\ResponseException.cs">
+      <Link>_shared\redis\ResponseException.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\_document\StaticDocument.cs">
+      <Link>_shared\StaticDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\__tuple_this.cs">
+      <Link>_shared\__tuple_this.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\__web_server.cs">
+      <Link>_shared\__web_server.cs</Link>
+    </Compile>
+    <Compile Include="MyService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyServiceInstaller.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="App.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
