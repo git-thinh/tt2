@@ -9,4 +9,6 @@ _IMG_SIZE
 _DOC_INFO
 
 
-/?command=TRANSLATE_TEXT_GOOGLE_01&input=hello
+http://localhost:12300?cmd=TRANSLATE_TEXT_GOOGLE_01&input=hello
+
+http://localhost:12300?cmd=PDF_MMF_TT&input=D:\book\Bs Ha Ngoc Thuan diem sach Hoc Lam Phat.pdf

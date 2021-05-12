@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.ServiceProcess;
 using System.Text;
 using System.Threading;
@@ -20,7 +21,21 @@ class Program
                 //    else __getUrlHttp(requestId, input);
                 //}
                 break;
+            case COMMANDS.PDF_SPLIT_ALL_PNG:
+                PdfService.SplitAllPng(requestId, input);
+                break;
+            case COMMANDS.PDF_MMF_TT:
+                PdfService.PDF_MMF_TT(requestId, input);
+                break;
         }
+    }
+
+    static void __initApp()
+    {
+        if (!Directory.Exists(__CONFIG.PATH_TT_RAW))
+            Directory.CreateDirectory(__CONFIG.PATH_TT_RAW);
+        if (!Directory.Exists(__CONFIG.PATH_TT_ZIP))
+            Directory.CreateDirectory(__CONFIG.PATH_TT_ZIP);
     }
 
     #region [ MAIN ]
@@ -40,6 +55,7 @@ class Program
     static bool __running = true;
     static void __startApp()
     {
+        __initApp();
         string uri = string.Format("http://{0}:{1}/", __CONFIG.HTTP_HOST, __CONFIG.HTTP_PORT);
         _http = new WebServer(__executeCommand);
         _http.Start(uri);

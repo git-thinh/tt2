@@ -79,6 +79,216 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ByteArray.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\ByteArray.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ByteString.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\ByteString.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedInputStream.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\CodedInputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedOutputStream.ComputeSize.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\CodedOutputStream.ComputeSize.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\CodedOutputStream.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\CodedOutputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\MapField.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Collections\MapField.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\ReadOnlyDictionary.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Collections\ReadOnlyDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Collections\RepeatedField.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Collections\RepeatedField.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Compatibility\PropertyInfoExtensions.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Compatibility\PropertyInfoExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Compatibility\TypeExtensions.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Compatibility\TypeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\FieldCodec.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\FieldCodec.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\FrameworkPortability.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\FrameworkPortability.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ICustomDiagnosticMessage.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\ICustomDiagnosticMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\IDeepCloneable.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\IDeepCloneable.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\IMessage.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\IMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\InvalidJsonException.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\InvalidJsonException.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\InvalidProtocolBufferException.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\InvalidProtocolBufferException.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonFormatter.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\JsonFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonParser.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\JsonParser.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonToken.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\JsonToken.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\JsonTokenizer.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\JsonTokenizer.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\LimitedInputStream.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\LimitedInputStream.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\MessageExtensions.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\MessageExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\MessageParser.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\MessageParser.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\ProtoPreconditions.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\ProtoPreconditions.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\Descriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\Descriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorBase.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\DescriptorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorPool.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\DescriptorPool.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorUtil.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\DescriptorUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\DescriptorValidationException.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\DescriptorValidationException.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\EnumDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\EnumDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\EnumValueDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\EnumValueDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldAccessorBase.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\FieldAccessorBase.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\FieldDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FieldType.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\FieldType.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\FileDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\FileDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\GeneratedClrTypeInfo.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\GeneratedClrTypeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\IDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\IDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\IFieldAccessor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\IFieldAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MapFieldAccessor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\MapFieldAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MessageDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\MessageDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\MethodDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\MethodDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OneofAccessor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\OneofAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OneofDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\OneofDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\OriginalNameAttribute.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\OriginalNameAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\PackageDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\PackageDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\PartialClasses.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\PartialClasses.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\ReflectionUtil.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\ReflectionUtil.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\RepeatedFieldAccessor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\RepeatedFieldAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\ServiceDescriptor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\ServiceDescriptor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\SingleFieldAccessor.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\SingleFieldAccessor.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\Reflection\TypeRegistry.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\Reflection\TypeRegistry.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Any.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Any.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\AnyPartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\AnyPartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Api.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Api.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Duration.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Duration.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\DurationPartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\DurationPartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Empty.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Empty.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\FieldMask.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\FieldMask.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\FieldMaskPartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\FieldMaskPartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\SourceContext.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\SourceContext.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Struct.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Struct.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\TimeExtensions.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\TimeExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Timestamp.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Timestamp.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\TimestampPartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\TimestampPartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Type.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Type.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\ValuePartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\ValuePartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\Wrappers.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\Wrappers.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WellKnownTypes\WrappersPartial.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WellKnownTypes\WrappersPartial.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Google.Protobuf_3.1.x_Nov.30.2016\Google.Protobuf\WireFormat.cs">
+      <Link>_shared\Google.Protobuf_3.1.x_Nov.30.2016\WireFormat.cs</Link>
+    </Compile>
     <Compile Include="..\_Shared\LibCurlNet\Curl.cs">
       <Link>_shared\LibCurlNet\Curl.cs</Link>
     </Compile>
@@ -302,5 +512,6 @@
       <DependentUpon>PasswordForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
