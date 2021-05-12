@@ -1,11 +1,10 @@
-﻿using Google.Protobuf;
-using Google.Protobuf.WellKnownTypes;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using PdfiumViewer;
 using System;
 using System.Collections.Generic;
 using System.Drawing.Imaging;
 using System.IO;
+using System.MMF;
 using System.Text;
 
 public class PdfService
@@ -13,38 +12,24 @@ public class PdfService
     #region [ + ]
 
 
-    public static void __mmf_Write(oMMF o, Stream body)
+    public static void __mmf_Write(string file, oMMF o, byte[] body)
     {
-        var lsSize = new List<Value>();
-        foreach (int len in o.sizes) lsSize.Add(Value.ForNumber(len));
-        var head = new Struct
+        string json = JsonConvert.SerializeObject(o);
+        var lz = LZ4.LZ4Codec.Wrap(Encoding.UTF8.GetBytes(json));
+
+        var ls = new List<byte>();
+        ls.AddRange(BitConverter.GetBytes(lz.Length));
+        ls.AddRange(lz);
+
+        int len = ls.Count + body.Length;
+
+        using (var map = MemoryMappedFile.Create(file, MapProtection.PageReadWrite, len))
+        using (Stream view = map.MapView(MapAccess.FileMapWrite, 0, len))
         {
-            Fields =
-            {
-                ["id"] = Value.ForNumber(o.id),
-                ["compress"] = Value.ForBool(o.compress),
-                ["type"] = Value.ForString(o.type.ToString()),
-                ["title"] = Value.ForString(string.Empty),
-                ["author"] = Value.ForString(string.Empty),
-                ["tag"] = Value.ForString(string.Empty),
-                ["info"] = Value.ForString(JsonConvert.SerializeObject(o.infos)),
-                ["year_created"] = Value.ForNumber(0),
-                ["size"] = Value.ForList(lsSize.ToArray()),
-            }
-        };
-        byte[] bs;
-        var lsHead = new List<byte>();
-        var bfh = head.ToByteArray();
-        bs = BitConverter.GetBytes(bfh.Length);
-        lsHead.AddRange(bs);
-        lsHead.AddRange(bfh);
+            view.Write(ls.ToArray(), 0, ls.Count);
+            view.Write(body, 0, body.Length);
+        }
 
-        ////var vd = Struct.Parser.ParseFrom(bfh);
-        ////Value vid;
-        ////vd.Fields.TryGetValue("id", out vid);
-        ////long id2 = (long)vid.NumberValue;
-
-        //int size = buf.Length;
         //MemoryMappedFile map = MemoryMappedFile.Create(MapProtection.PageReadWrite, size, name);
         //using (Stream view = map.MapView(MapAccess.FileMapWrite, 0, size))
         //    view.Write(buf, 0, size);
@@ -201,16 +186,17 @@ public class PdfService
                         }
                         redis.ReplyRequest(requestId, cmd, ok ? 1 : 0, docId, i, "PROCESSING", file, err);
                     }
+
+                    string ttFile = Path.Combine(__CONFIG.PATH_TT_RAW, string.Format("{0}.tt", docId));
                     oMMF mmf = new oMMF()
                     {
-                        file = Path.Combine(__CONFIG.PATH_TT_RAW, string.Format("{0}.tt", docId)),
                         compress = false,
                         id = docId,
                         infos = doc.GetInformation().toDictionary(),
                         sizes = sizes,
                         type = MMF_TYPE.PNG
                     };
-                    __mmf_Write(mmf, body);
+                    __mmf_Write(ttFile, mmf, body.ToArray());
 
                     redis.ReplyRequest(requestId, cmd, 1, docId, pageTotal, "COMPLETE", file);
                 }

@@ -12,3 +12,4 @@ _DOC_INFO
 http://localhost:12300?cmd=TRANSLATE_TEXT_GOOGLE_01&input=hello
 
 http://localhost:12300?cmd=PDF_MMF_TT&input=D:\book\Bs Ha Ngoc Thuan diem sach Hoc Lam Phat.pdf
+http://localhost:12300?cmd=PDF_MMF_TT&input=ky mon don giap - NGUYEN MANH BAO.pdf
