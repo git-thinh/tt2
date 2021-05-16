@@ -11,11 +11,11 @@ public class MyService : ServiceBase
 
     protected override void OnStart(string[] args)
     {
-        Program.StartOnWindowService(args);
+        App.StartOnWindowService(args);
     }
 
     protected override void OnStop()
     {
-        Program.Stop();
+        App.Stop();
     }
 }

@@ -475,8 +475,53 @@
     <Compile Include="..\_shared\redisbasic\ResponseException.cs">
       <Link>_shared\redis\ResponseException.cs</Link>
     </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisContractAttribute.cs">
+      <Link>_shared\Salar.Bois\BoisContractAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisMemberAttribute.cs">
+      <Link>_shared\Salar.Bois\BoisMemberAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisMemberInfo.cs">
+      <Link>_shared\Salar.Bois\BoisMemberInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisSerializer.cs">
+      <Link>_shared\Salar.Bois\BoisSerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisTypeCache.cs">
+      <Link>_shared\Salar.Bois\BoisTypeCache.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\BoisTypeInfo.cs">
+      <Link>_shared\Salar.Bois\BoisTypeInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\EnBoisKnownType.cs">
+      <Link>_shared\Salar.Bois\EnBoisKnownType.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\EnBoisMemberType.cs">
+      <Link>_shared\Salar.Bois\EnBoisMemberType.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\PrimitivesConvertion.cs">
+      <Link>_shared\Salar.Bois\PrimitivesConvertion.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Salar.Bois\ReflectionHelper.cs">
+      <Link>_shared\Salar.Bois\ReflectionHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Udp\NetClient.cs">
+      <Link>_shared\Udp\NetClient.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Udp\NetPacket.cs">
+      <Link>_shared\Udp\NetPacket.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Udp\NetPacketReader.cs">
+      <Link>_shared\Udp\NetPacketReader.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\Udp\NetServer.cs">
+      <Link>_shared\Udp\NetServer.cs</Link>
+    </Compile>
     <Compile Include="..\_shared\_document\StaticDocument.cs">
       <Link>_shared\StaticDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\__config.cs">
+      <Link>_shared\__config.cs</Link>
     </Compile>
     <Compile Include="..\_shared\__tuple_this.cs">
       <Link>_shared\__tuple_this.cs</Link>
@@ -495,11 +540,13 @@
     <Compile Include="service\PdfService.cs" />
     <Compile Include="service\CrawleService.cs" />
     <Compile Include="service\TranslateService.cs" />
-    <Compile Include="__CONFIG.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="..\_shared\pdfiumviewer\pan.cur">
       <Link>_shared\PdfiumViewer\pan.cur</Link>
+    </Content>
+    <Content Include="..\_Shared\Udp\Readme.txt">
+      <Link>_shared\Udp\Readme.txt</Link>
     </Content>
     <Content Include="Readme.txt" />
   </ItemGroup>

@@ -1,101 +1,96 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.ServiceProcess;
-using System.Text;
 using System.Threading;
-using System.Web;
 
-class Program
+class App
 {
-    static void __executeCommand(Tuple<string, COMMANDS, string> data)
-    {
-        string requestId = data.Item1, input = data.Item3;
-        COMMANDS cmd = data.Item2;
-        switch (cmd)
-        {
-            case COMMANDS.CURL_GET_HTML:
-                //if (!string.IsNullOrEmpty(input))
-                //{
-                //    if (input.Contains("https")) __getUrlHttps(requestId, input);
-                //    else __getUrlHttp(requestId, input);
-                //}
-                break;
-            case COMMANDS.PDF_SPLIT_ALL_PNG:
-                PdfService.SplitAllPng(requestId, input);
-                break;
-            case COMMANDS.PDF_MMF_TT:
-                PdfService.PDF_MMF_TT(requestId, input);
-                break;
-        }
-    }
-
     static void __initApp()
     {
-        if (!Directory.Exists(__CONFIG.PATH_TT_RAW))
-            Directory.CreateDirectory(__CONFIG.PATH_TT_RAW);
-        if (!Directory.Exists(__CONFIG.PATH_TT_ZIP))
-            Directory.CreateDirectory(__CONFIG.PATH_TT_ZIP);
+        if (!Directory.Exists(__CONFIG.PATH_TT_RAW)) Directory.CreateDirectory(__CONFIG.PATH_TT_RAW);
+        if (!Directory.Exists(__CONFIG.PATH_TT_ZIP)) Directory.CreateDirectory(__CONFIG.PATH_TT_ZIP);
+    }
+
+    static void __executeCommand(string requestId, COMMANDS cmd, string input, Dictionary<string, object> data)
+    {
+        if (data == null) data = new Dictionary<string, object>();
+        switch (cmd)
+        {
+            case COMMANDS.PDF_SPLIT_ALL_JPG:
+                PdfService.SplitAllJpeg(requestId, cmd, input, data);
+                break;
+        }
     }
 
     #region [ MAIN ]
 
-    static void __executeTaskTcp(Tuple<string, byte[]> data)
+    static NetServer __server;
+    static Thread __threadUdp = null;
+    static List<IPEndPoint> __subcribes = new List<IPEndPoint>();
+
+    public static void Reply(COMMANDS cmd, string requestId, string input, Dictionary<string, object> data)
     {
-        if (data == null || data.Item2 == null || data.Item2.Length < 39) return;
-        var buf = data.Item2;
-        string requestId = Encoding.ASCII.GetString(buf, 0, 36);
-        var cmd = (COMMANDS)((int)buf[36]);
-        string text = Encoding.UTF8.GetString(buf, 37, buf.Length - 37);
-        __executeCommand(new Tuple<string, COMMANDS, string>(requestId, cmd, text));
+        var packet = new NetPacket(cmd, requestId, input, data);
+        for (int i = 0; i < __subcribes.Count; i++)
+        {
+            try
+            {
+                __server.Send(__subcribes[i], packet);
+            }
+            catch {
+                __subcribes.RemoveAt(i);
+                i--;
+            }
+        }
     }
 
-    static WebServer _http;
-    static RedisBase m_subcriber;
-    static bool __running = true;
+    static void __serverOnRecieve(IPEndPoint client, NetPacket packet)
+    {
+        try
+        {
+            var reader = new NetPacketReader(packet);
+            var cmd = reader.Read<COMMANDS>();
+            if (cmd == COMMANDS.NODE_SUBCRIBER)
+                __subcribes.Add(client);
+            else
+            {
+                var requestId = reader.ReadRequestId();
+                var input = reader.Read<string>();
+                var data = reader.Read<Dictionary<string, object>>();
+                __executeCommand(requestId, cmd, input, data);
+            }
+        }
+        catch
+        {
+        }
+    }
+
     static void __startApp()
     {
         __initApp();
-        string uri = string.Format("http://{0}:{1}/", __CONFIG.HTTP_HOST, __CONFIG.HTTP_PORT);
-        _http = new WebServer(__executeCommand);
-        _http.Start(uri);
-        m_subcriber = new RedisBase(new RedisSetting(REDIS_TYPE.ONLY_SUBCRIBE,__CONFIG.REDIS_HOST,  __CONFIG.REDIS_PORT_READ));
-        m_subcriber.PSUBSCRIBE(__CONFIG.CHANNEL_NAME);
-        var bs = new List<byte>();
-        while (__running)
-        {
-            if (!m_subcriber.m_stream.DataAvailable)
-            {
-                if (bs.Count > 0)
-                {
-                    var buf = m_subcriber.__getBodyPublish(bs.ToArray(), __CONFIG.CHANNEL_NAME);
-                    bs.Clear();
-                    if (buf != null)
-                        new Thread(new ParameterizedThreadStart((o) =>
-                        __executeTaskTcp((Tuple<string, byte[]>)o))).Start(buf);
-                }
-                Thread.Sleep(100);
-                continue;
-            }
-            byte b = (byte)m_subcriber.m_stream.ReadByte();
-            bs.Add(b);
-        }
+
+        __server = new NetServer(__CONFIG.UDP_PORT);
+        __server.OnRecieve += __serverOnRecieve;
+        __threadUdp = new Thread(__server.Listen);
+        __threadUdp.IsBackground = true;
+        __threadUdp.Start();
     }
 
     static void __stopApp()
     {
-        __running = false;
-        _http.Stop();
+        if (__threadUdp != null)
+            __threadUdp.Abort();
     }
 
     // FOR SETTING OF WINDOWS SERVICE
 
-    static Thread __threadWS = null;
     static void Main(string[] args)
     {
         if (Environment.UserInteractive)
         {
-            Console.Title = string.Format("{0} - {1}", __CONFIG.CHANNEL_NAME, __CONFIG.HTTP_PORT);
+            Console.Title = string.Format("{0} - {1}", __CONFIG.CHANNEL_NAME, __CONFIG.UDP_PORT);
             StartOnConsoleApp(args);
             Console.WriteLine("Press any key to stop...");
             Console.ReadKey(true);
@@ -106,18 +101,8 @@ class Program
     }
 
     public static void StartOnConsoleApp(string[] args) => __startApp();
-    public static void StartOnWindowService(string[] args)
-    {
-        __threadWS = new Thread(new ThreadStart(() => __startApp()));
-        __threadWS.IsBackground = true;
-        __threadWS.Start();
-    }
-
-    public static void Stop()
-    {
-        __stopApp();
-        if (__threadWS != null) __threadWS.Abort();
-    }
+    public static void StartOnWindowService(string[] args) => __startApp();
+    public static void Stop() => __stopApp();
 
     #endregion;
 }
