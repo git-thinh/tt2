@@ -21,6 +21,10 @@ class App
             case COMMANDS.PDF_SPLIT_ALL_JPG:
                 PdfService.SplitAllJpeg(requestId, cmd, input, data);
                 break;
+            case COMMANDS.OCR_TEXT_PAGE:
+            case COMMANDS.OCR_TEXT_ALL_PAGE:
+                OcrService.convertImage2Text_OneOrAllPage(requestId, cmd, input, data);
+                break;
         }
     }
 
@@ -30,16 +34,22 @@ class App
     static Thread __threadUdp = null;
     static List<IPEndPoint> __subcribes = new List<IPEndPoint>();
 
-    public static void Reply(COMMANDS cmd, string requestId, string input, Dictionary<string, object> data)
+    public static void Reply(COMMANDS cmd, string requestId, string input, string message)
+        => _reply(new NetPacket(cmd, requestId, input, message, null));
+    public static void Reply(COMMANDS cmd, string requestId, string input, Dictionary<string, object> data = null)
+        => _reply(new NetPacket(cmd, requestId, input, string.Empty, data));
+    public static void Reply(COMMANDS cmd, string requestId, string input, string message, Dictionary<string, object> data = null)
+        => _reply(new NetPacket(cmd, requestId, input, message, data));
+    static void _reply(NetPacket packet)
     {
-        var packet = new NetPacket(cmd, requestId, input, data);
         for (int i = 0; i < __subcribes.Count; i++)
         {
             try
             {
                 __server.Send(__subcribes[i], packet);
             }
-            catch {
+            catch
+            {
                 __subcribes.RemoveAt(i);
                 i--;
             }
@@ -58,6 +68,7 @@ class App
             {
                 var requestId = reader.ReadRequestId();
                 var input = reader.Read<string>();
+                var message = reader.Read<string>();
                 var data = reader.Read<Dictionary<string, object>>();
                 __executeCommand(requestId, cmd, input, data);
             }

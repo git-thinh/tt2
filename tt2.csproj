@@ -505,6 +505,186 @@
     <Compile Include="..\_Shared\Salar.Bois\ReflectionHelper.cs">
       <Link>_shared\Salar.Bois\ReflectionHelper.cs</Link>
     </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\AddNewColorStatus.cs">
+      <Link>_shared\Tesseract\AddNewColorStatus.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\AggregateResultRenderer.cs">
+      <Link>_shared\Tesseract\AggregateResultRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\BitmapHelper.cs">
+      <Link>_shared\Tesseract\BitmapHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\BitmapToPixConverter.cs">
+      <Link>_shared\Tesseract\BitmapToPixConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ChoiceIterator.cs">
+      <Link>_shared\Tesseract\ChoiceIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\DisposableBase.cs">
+      <Link>_shared\Tesseract\DisposableBase.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ElementProperties.cs">
+      <Link>_shared\Tesseract\ElementProperties.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\EngineConfig.cs">
+      <Link>_shared\Tesseract\EngineConfig.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\EngineMode.cs">
+      <Link>_shared\Tesseract\EngineMode.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\FontAttributes.cs">
+      <Link>_shared\Tesseract\FontAttributes.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\FontInfo.cs">
+      <Link>_shared\Tesseract\FontInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ImageFormat.cs">
+      <Link>_shared\Tesseract\ImageFormat.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\ErrorMessage.cs">
+      <Link>_shared\Tesseract\Internal\ErrorMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\Guard.cs">
+      <Link>_shared\Tesseract\Internal\Guard.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\ILibraryLoaderLogic.cs">
+      <Link>_shared\Tesseract\Internal\ILibraryLoaderLogic.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\InteropRuntimeImplementer.cs">
+      <Link>_shared\Tesseract\Internal\InteropRuntimeImplementer.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\LibraryLoader.cs">
+      <Link>_shared\Tesseract\Internal\LibraryLoader.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\RuntimeDllImportAttribute.cs">
+      <Link>_shared\Tesseract\Internal\RuntimeDllImportAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\SystemManager.cs">
+      <Link>_shared\Tesseract\Internal\SystemManager.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\UnixLibraryLoaderLogic.cs">
+      <Link>_shared\Tesseract\Internal\UnixLibraryLoaderLogic.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\interopdotnet\WindowsLibraryLoaderLogic.cs">
+      <Link>_shared\Tesseract\Internal\WindowsLibraryLoaderLogic.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\Logger.cs">
+      <Link>_shared\Tesseract\Internal\Logger.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\internal\TessConvert.cs">
+      <Link>_shared\Tesseract\Internal\TessConvert.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\interop\BaseApi.cs">
+      <Link>_shared\Tesseract\Interop\BaseApi.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\interop\Constants.cs">
+      <Link>_shared\Tesseract\Interop\Constants.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\interop\HostProcessInfo.cs">
+      <Link>_shared\Tesseract\Interop\HostProcessInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\interop\LeptonicaApi.cs">
+      <Link>_shared\Tesseract\Interop\LeptonicaApi.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\interop\MarshalHelper.cs">
+      <Link>_shared\Tesseract\Interop\MarshalHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\IResultRenderer.cs">
+      <Link>_shared\Tesseract\IResultRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\LeptonicaException.cs">
+      <Link>_shared\Tesseract\LeptonicaException.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\LoadLibraryException.cs">
+      <Link>_shared\Tesseract\LoadLibraryException.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\MathHelper.cs">
+      <Link>_shared\Tesseract\MathHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Orientation.cs">
+      <Link>_shared\Tesseract\Orientation.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Page.cs">
+      <Link>_shared\Tesseract\Page.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PageIterator.cs">
+      <Link>_shared\Tesseract\PageIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PageIteratorLevel.cs">
+      <Link>_shared\Tesseract\PageIteratorLevel.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PageSegMode.cs">
+      <Link>_shared\Tesseract\PageSegMode.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Pix.cs">
+      <Link>_shared\Tesseract\Pix.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixArray.cs">
+      <Link>_shared\Tesseract\PixArray.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixArrayAccessType.cs">
+      <Link>_shared\Tesseract\PixArrayAccessType.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixColor.cs">
+      <Link>_shared\Tesseract\PixColor.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixColormap.cs">
+      <Link>_shared\Tesseract\PixColormap.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixConverter.cs">
+      <Link>_shared\Tesseract\PixConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixData.cs">
+      <Link>_shared\Tesseract\PixData.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PixToBitmapConverter.cs">
+      <Link>_shared\Tesseract\PixToBitmapConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\PolyBlockType.cs">
+      <Link>_shared\Tesseract\PolyBlockType.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Rect.cs">
+      <Link>_shared\Tesseract\Rect.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ResultIterator.cs">
+      <Link>_shared\Tesseract\ResultIterator.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ResultRenderer.cs">
+      <Link>_shared\Tesseract\ResultRenderer.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\RotationFill.cs">
+      <Link>_shared\Tesseract\RotationFill.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\RotationMethod.cs">
+      <Link>_shared\Tesseract\RotationMethod.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Scew.cs">
+      <Link>_shared\Tesseract\Scew.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\ScewSweep.cs">
+      <Link>_shared\Tesseract\ScewSweep.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\Sel.cs">
+      <Link>_shared\Tesseract\Sel.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\TesseractDrawingExtensions.cs">
+      <Link>_shared\Tesseract\TesseractDrawingExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\TesseractEngine.cs">
+      <Link>_shared\Tesseract\TesseractEngine.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\TesseractEnviornment.cs">
+      <Link>_shared\Tesseract\TesseractEnviornment.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\TesseractException.cs">
+      <Link>_shared\Tesseract\TesseractException.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\TextLineOrder.cs">
+      <Link>_shared\Tesseract\TextLineOrder.cs</Link>
+    </Compile>
+    <Compile Include="..\_shared\tesseract\4.1.1\WritingDirection.cs">
+      <Link>_shared\Tesseract\WritingDirection.cs</Link>
+    </Compile>
     <Compile Include="..\_Shared\Udp\NetClient.cs">
       <Link>_shared\Udp\NetClient.cs</Link>
     </Compile>
@@ -519,6 +699,9 @@
     </Compile>
     <Compile Include="..\_shared\_document\StaticDocument.cs">
       <Link>_shared\StaticDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\_Shared\_Document\TesseractModel.cs">
+      <Link>_shared\TesseractModel.cs</Link>
     </Compile>
     <Compile Include="..\_Shared\__config.cs">
       <Link>_shared\__config.cs</Link>
@@ -537,6 +720,7 @@
     </Compile>
     <Compile Include="App.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="service\OcrService.cs" />
     <Compile Include="service\PdfService.cs" />
     <Compile Include="service\CrawleService.cs" />
     <Compile Include="service\TranslateService.cs" />
