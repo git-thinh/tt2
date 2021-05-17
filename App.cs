@@ -21,6 +21,7 @@ class App
             case COMMANDS.PDF_SPLIT_ALL_JPG:
                 PdfService.SplitAllJpeg(requestId, cmd, input, data);
                 break;
+            case COMMANDS.OCR_BOX_PAGE:
             case COMMANDS.OCR_TEXT_PAGE:
             case COMMANDS.OCR_TEXT_ALL_PAGE:
                 OcrService.convertImage2Text_OneOrAllPage(requestId, cmd, input, data);

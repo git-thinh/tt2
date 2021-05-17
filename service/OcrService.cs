@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Tesseract;
 
 public class OcrService
@@ -35,13 +36,20 @@ public class OcrService
                     {
                         using (var tes = engine.Process(pix))
                         {
-                            string s = tes.GetText().Trim();
-                            dic.Add("ocr_text", s);
-                            //var boxes = tes.GetSegmentedRegions(level).Select(x =>
-                            //    string.Format("{0}_{1}_{2}_{3}", x.X, x.Y, x.Width, x.Height)).ToArray();
-                            //dic.Add("box_format", "x_y_width_height");
-                            //dic.Add("box_text", string.Join("|", boxes.Select(x => x.ToString()).ToArray()));
-                            //dic.Add("box_count", boxes.Length);
+                            switch (cmd)
+                            {
+                                case COMMANDS.OCR_TEXT_PAGE:
+                                    string s = tes.GetText().Trim();
+                                    dic.Add("ocr_text", s);
+                                    break;
+                                case COMMANDS.OCR_BOX_PAGE:
+                                    var boxes = tes.GetSegmentedRegions(ocr_level).Select(x =>
+                                        string.Format("{0}_{1}_{2}_{3}", x.X, x.Y, x.Width, x.Height)).ToArray();
+                                    dic.Add("box_format", "x_y_width_height");
+                                    dic.Add("box_text", string.Join("|", boxes.Select(x => x.ToString()).ToArray()));
+                                    dic.Add("box_count", boxes.Length);
+                                    break;
+                            }
                         }
                     }
 
