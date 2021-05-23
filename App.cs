@@ -26,6 +26,9 @@ class App
             case COMMANDS.OCR_TEXT_ALL_PAGE:
                 OcrService.convertImage2Text_OneOrAllPage(requestId, cmd, input, data);
                 break;
+            case COMMANDS.CURL_FTP_UPLOAD_FILE:
+                FTPUpload.Execute(requestId, cmd, input, data);
+                break;
         }
     }
 
